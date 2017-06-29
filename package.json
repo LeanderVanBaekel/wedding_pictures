@@ -1,0 +1,33 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "wedding pictures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leander van Baekel",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "cssnano": "^3.10.0",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "fs": "^0.0.1-security",
+    "mongodb": "^2.2.29",
+    "monk": "^6.0.1",
+    "session-file-store": "^1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "http": "^0.0.0",
+    "multer": "^1.3.0",
+    "pixrem": "^3.0.2"
+  }
+}
