@@ -1,4 +1,4 @@
-var express     = require('express'),
+    express     = require('express'),
     http        = require('http'),
     app 		    = express(),
     session 		= require('express-session'),
