@@ -1,53 +1,30 @@
-<h1>hoi</h1>
-<form action="/upload/create" enctype="multipart/form-data" method="post">
+<header>
+  <h1>Bruiloft Angela & Robin</h1>
+</header>
 
-  <input class="file" type="file" multiple name="file" value="">
+<section class="content">
+  {{#each data.images}}
+    <img src="/uploads/crops/{{this}}" alt="">
+  {{/each}}
+</section>
 
-  <button type="submit" name="button">Uploaden</button>
+<footer>
+  <button class="upload-button">Uploaden</button>
+</footer>
 
-</form>
+<section class="popup-container hidden">
+  <div class="close-button">
+    X
+  </div>
+  <form action="/upload/create" enctype="multipart/form-data" method="post">
 
-<div class="preview">
+    <input class="file" type="file" multiple name="file" value="">
 
-</div>
+    <button type="submit" name="button">Uploaden</button>
 
-<script type="text/javascript">
-  var input = document.querySelector('.file');
-  // input.addEventListener('change', function(el) {
-  //   console.log(el.srcElement);
-  //
-  // });
+  </form>
 
-  function previewFiles() {
+  <div class="preview">
 
-    var preview = document.querySelector('.preview');
-    var files   = document.querySelector('input[type=file]').files;
-
-    function readAndPreview(file) {
-
-      // Make sure `file.name` matches our extensions criteria
-      if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
-        var reader = new FileReader();
-
-        reader.addEventListener("load", function () {
-          var image = new Image();
-          image.height = 500;
-          image.title = file.name;
-          image.src = this.result;
-          preview.appendChild( image );
-        }, false);
-
-        reader.readAsDataURL(file);
-      }
-
-    }
-
-    if (files) {
-      [].forEach.call(files, readAndPreview);
-    }
-  }
-
-  input.addEventListener('change', function(el) {
-    previewFiles();
-  });
-</script>
+  </div>
+</section>
